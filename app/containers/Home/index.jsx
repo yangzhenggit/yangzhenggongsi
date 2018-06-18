@@ -2,7 +2,12 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
 import HomeHeader from '../../components/HomeHeader'
+import Category from '../../components/Gategory'
+import Ad from './subpage/Ad.jsx'
+import List from './subpage/List.jsx'
+
 class Home extends React.Component {
 	constructor(props, context) {
 		super(props, context);
@@ -12,6 +17,10 @@ class Home extends React.Component {
 		return (
 			<div>
 				<HomeHeader cityName={this.props.userinfo.cityName} />
+				<Category />
+				<div style={{height: '15px'}}></div>
+				<Ad />
+				<List cityName={this.props.userinfo.cityName} />
 			</div>
 		)
 	}
@@ -23,7 +32,7 @@ function mapStateToProps(state) {
 	}
 }
 
-function mapDispatch(dispatch) {
+function mapDispatchToProps(dispatch) {
 	return {
 		
 	}
