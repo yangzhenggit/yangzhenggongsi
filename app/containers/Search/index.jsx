@@ -20,6 +20,9 @@ class Search extends React.Component {
 			</div>
 		)
 	}
+	componentDidMount() {
+		//alert(this.props.params.router)
+	}
 }
 
 export default Search

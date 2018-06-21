@@ -33,7 +33,6 @@ class SearchList extends React.Component {
 		)
 	}
 	componentDidMount() {
-		alert(1)
 		//获取首页数据
 		this.loadFirstPageData()
 	}

@@ -4,7 +4,7 @@ import App from '../containers/App.jsx'
 import Home from '../containers/Home/index.jsx'
 import City from '../containers/City/index.jsx'
 import Search from '../containers/Search/index.jsx'
-
+import Detail from '../containers/Detail/index.jsx'
 
 class routeMap extends React.Component {
 	render() {
@@ -14,6 +14,7 @@ class routeMap extends React.Component {
 					<IndexRoute component={Home}/>
 					<Route path='/city' component={City} />
 					<Route path='/search/:category(/:keyWord)' component={Search}/>
+					<Route path='/detail/:id' component={Detail} />
 				</Route>
 			</Router>			
 		)
