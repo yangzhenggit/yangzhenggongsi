@@ -16,6 +16,7 @@ class BuyAndStore extends React.Component {
 		return (
 			<div className='buy-store-container clear-fix'>
 				<div className="item-container float-left">
+					{this.props.isStore}
 					<button className={this.props.isStore ? 'selected' : ''} onClick={this.storeClickHandle.bind(this)}>{this.props.isStore ? '已收藏' : '收藏'}</button>
 				</div>
  				<div className="item-container float-right">
@@ -25,10 +26,10 @@ class BuyAndStore extends React.Component {
 		)
 	}
 	storeClickHandle() {
-		this.props.buyHandle()
+		this.props.storeHandle()
 	}
 	buyClickHandle() {
-		this.props.storeHandle()
+		this.props.buyHandle()
 	}
 }
 /*redux*/
